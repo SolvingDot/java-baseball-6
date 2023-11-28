@@ -28,7 +28,7 @@ public class CorrectNumbers {
     }
 
     private void ensureRangeOfDigits(List<Integer> threeNumbers) {
-        if (threeNumbers.stream().allMatch(digit -> digit >= MINIMUM && digit <= MAXIMUM)) {
+        if (!threeNumbers.stream().allMatch(digit -> digit >= MINIMUM && digit <= MAXIMUM)) {
             throw new IllegalArgumentException();
         }
     }
