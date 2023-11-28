@@ -3,9 +3,13 @@ package baseball.domain;
 import java.util.List;
 
 public class Referee {
+    private static final int FIRST_INDEX = 0;
+    private static final int NUMBER_SIZE = 3;
+    private static final int NO_COUNT = 0;
+
     public int countStrike(List<Integer> inputNumbers, List<Integer> correctNumbers) {
-        int strike = 0;
-        for (int index = 0; index < 3; index++) {
+        int strike = NO_COUNT;
+        for (int index = FIRST_INDEX; index < NUMBER_SIZE; index++) {
             if (hasSameNumberAtSamePlace(inputNumbers, correctNumbers, index)) {
                 strike++;
             }
@@ -14,8 +18,8 @@ public class Referee {
     }
 
     public int countBall(List<Integer> inputNumbers, List<Integer> correctNumbers) {
-        int ball = 0;
-        for (int index = 0; index < 3; index++) {
+        int ball = NO_COUNT;
+        for (int index = FIRST_INDEX; index < NUMBER_SIZE; index++) {
             if (hasSameNumberAtOtherPlace(inputNumbers, correctNumbers, index)) {
                 ball++;
             }

@@ -6,7 +6,6 @@ public class CorrectNumbers {
     private static final int SIZE_OF_CORRECT_NUMBERS = 3;
     private static final int MINIMUM = 1;
     private static final int MAXIMUM = 9;
-    private static final String NUMERIC_WITHOUT_ZERO = "^[1-9]*$";
 
     private final List<Integer> correctNumbers;
 

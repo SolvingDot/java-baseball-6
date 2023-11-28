@@ -1,22 +1,27 @@
 package baseball.ui;
 
+import baseball.ui.message.OutputMessage;
+
 public class OutputView {
+    private static final int NO_COUNT = 0;
+    private static final int FULL_COUNT = 3;
+
     public void printHint(int strike, int ball) {
-        if (strike == 0 && ball == 0) {
-            System.out.println("낫싱");
+        if (strike == NO_COUNT && ball == NO_COUNT) {
+            System.out.println(OutputMessage.NOTHING);
         }
-        if (strike == 3) {
-            System.out.println(strike + "스트라이크");
-            System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+        if (strike == FULL_COUNT) {
+            System.out.printf(OutputMessage.STRIKE, strike);
+            System.out.println(OutputMessage.CORRECT_ANSWER);
         }
-        if (strike < 3 && strike != 0 && ball == 0) {
-            System.out.println(strike + "스트라이크");
+        if (strike < FULL_COUNT && strike != NO_COUNT && ball == NO_COUNT) {
+            System.out.printf(OutputMessage.STRIKE, strike);
         }
-        if (strike == 0 && ball != 0) {
-            System.out.println(ball + "볼");
+        if (strike == NO_COUNT && ball != NO_COUNT) {
+            System.out.printf(OutputMessage.BALL, ball);
         }
-        if (strike != 0 && ball != 0) {
-            System.out.println(ball + "볼 " + strike + "스트라이크");
+        if (strike != NO_COUNT && ball != NO_COUNT) {
+            System.out.printf(OutputMessage.BALL_AND_STRIKE, ball, strike);
         }
     }
 }
