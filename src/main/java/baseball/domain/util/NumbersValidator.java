@@ -1,4 +1,4 @@
-package baseball.util;
+package baseball.domain.util;
 
 import baseball.ui.message.ErrorMessage;
 import java.util.List;

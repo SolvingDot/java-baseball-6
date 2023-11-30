@@ -2,9 +2,9 @@ package baseball.controller;
 
 import baseball.domain.CorrectNumbers;
 import baseball.domain.CorrectNumbersGenerator;
+import baseball.domain.util.InputValidator;
 import baseball.ui.InputView;
 import baseball.ui.OutputView;
-import baseball.util.InputValidator;
 
 public class GameStartContorller {
     private static final String GAME_OVER = "2";

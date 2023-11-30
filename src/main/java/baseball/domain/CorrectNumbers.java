@@ -1,6 +1,6 @@
 package baseball.domain;
 
-import baseball.util.NumbersValidator;
+import baseball.domain.util.NumbersValidator;
 import java.util.List;
 
 public class CorrectNumbers {
