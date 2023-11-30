@@ -7,6 +7,7 @@ import baseball.domain.util.InputValidator;
 import baseball.domain.util.NumbersValidator;
 import baseball.ui.InputView;
 import baseball.ui.OutputView;
+import baseball.ui.message.ErrorMessage;
 import java.util.List;
 
 public class GamePlayController {
@@ -42,8 +43,7 @@ public class GamePlayController {
                 validateNumbersOfPlayer(numbersOfPlayer);
                 break;
             } catch (IllegalArgumentException e) {
-                //System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
-                throw e;
+                System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
             }
         }
         return numbersOfPlayer;
