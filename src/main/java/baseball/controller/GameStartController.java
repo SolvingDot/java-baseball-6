@@ -7,13 +7,13 @@ import baseball.ui.InputView;
 import baseball.ui.OutputView;
 import baseball.ui.message.ErrorMessage;
 
-public class GameStartContorller {
+public class GameStartController {
     private static final String GAME_OVER = "2";
 
     private final InputView input;
     private final OutputView output;
 
-    public GameStartContorller(InputView input, OutputView output) {
+    public GameStartController(InputView input, OutputView output) {
         this.input = input;
         this.output = output;
     }

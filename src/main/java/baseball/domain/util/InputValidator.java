@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class InputValidator {
     private static final Pattern NUMERIC_PATTERN = Pattern.compile("^[0-9]*$");
 
-    private static final String RESTRAT = "1";
+    private static final String RESTART = "1";
     private static final String GAME_OVER = "2";
     private static final int SIZE_OF_CORRECT_NUMBERS = 3;
 
@@ -35,6 +35,6 @@ public class InputValidator {
     }
 
     private boolean canBeONlyOneOrTwo(String decision) {
-        return decision.equals(RESTRAT) || decision.equals(GAME_OVER);
+        return decision.equals(RESTART) || decision.equals(GAME_OVER);
     }
 }
