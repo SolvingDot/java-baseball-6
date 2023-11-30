@@ -18,6 +18,7 @@ public class InputView {
 
     public String askRestartOrGameOverOnce() {
         System.out.printf(InputMessage.ASK_DECISION, RESTART, GAME_OVER);
+        System.out.println();
         return Console.readLine();
     }
 }

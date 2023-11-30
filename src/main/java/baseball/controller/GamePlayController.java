@@ -59,8 +59,8 @@ public class GamePlayController {
     private void validateInputNumbers(String inputNumbers) {
         InputValidator validator = new InputValidator();
         validator.ensureInputHaveValues(inputNumbers);
-        validator.ensureInputSize(inputNumbers);
         validator.ensureInputHaveOnlyNumbers(inputNumbers);
+        validator.ensureInputSize(inputNumbers);
     }
 
     private void validateNumbersOfPlayer(List<Integer> numbersOfPlayer) {
