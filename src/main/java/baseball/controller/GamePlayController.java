@@ -4,7 +4,6 @@ import baseball.domain.CorrectNumbers;
 import baseball.domain.Referee;
 import baseball.ui.InputView;
 import baseball.ui.OutputView;
-import baseball.ui.message.ErrorMessage;
 import baseball.util.InputConverter;
 import baseball.util.InputValidator;
 import baseball.util.NumbersValidator;
@@ -43,7 +42,8 @@ public class GamePlayController {
                 validateNumbersOfPlayer(numbersOfPlayer);
                 break;
             } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
+                //System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
+                throw e;
             }
         }
         return numbersOfPlayer;

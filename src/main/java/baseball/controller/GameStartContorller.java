@@ -4,7 +4,6 @@ import baseball.domain.CorrectNumbers;
 import baseball.domain.CorrectNumbersGenerator;
 import baseball.ui.InputView;
 import baseball.ui.OutputView;
-import baseball.ui.message.ErrorMessage;
 import baseball.util.InputValidator;
 
 public class GameStartContorller {
@@ -49,7 +48,8 @@ public class GameStartContorller {
                 decision = readDecisionInput();
                 break;
             } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
+                //System.out.println(e.getMessage() + ErrorMessage.ASK_INPUT_AGAIN);
+                throw e;
             }
         }
         return decision;
