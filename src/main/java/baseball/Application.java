@@ -1,6 +1,6 @@
 package baseball;
 
-import baseball.controller.Game;
+import baseball.controller.GameStartContorller;
 import baseball.ui.InputView;
 import baseball.ui.OutputView;
 
@@ -9,7 +9,7 @@ public class Application {
         InputView input = new InputView();
         OutputView output = new OutputView();
 
-        Game game = new Game();
-        game.start(input, output);
+        GameStartContorller gameStartContorller = new GameStartContorller(input, output);
+        gameStartContorller.start();
     }
 }
